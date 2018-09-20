@@ -1,0 +1,33 @@
+Ubiquitous Religions
+分治法
+
+
+并查集
+int find(int x){//带路压
+     if(fa[x]!=x)//不是最终父亲，即父亲是自己的元素
+         fa[x]=find(fa[x])//递归更新，路径压缩。。。这里特别复杂，建议没有学过的人好好理解
+     return fa[x];
+}
+
+int find(int x){//不带路压
+
+    while(fa[x]!=x)
+
+        x=fa[x];
+
+    return x;
+
+}
+
+void unionn(int x,int y){//合并函数，带路压
+     int r1=find(x),r2=find(y);//找到xy的父亲，把其中一个父亲的父亲设置为另一个的父亲。
+     fa[r2]=r1;
+
+    find(y);//路径压缩，把y的每个父亲及其父亲的父亲设置为改变后的父亲。
+}
+
+void unionn(int x,int y){//合并函数，不带路压
+     int r1=find(x),r2=find(y);//找到xy的父亲，把其中一个父亲的父亲设置为另一个的父亲。
+     fa[r2]=r1;//不带路压
+
+}

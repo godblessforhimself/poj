@@ -1,0 +1,18 @@
+Y2K Accounting Bug
+
+Accounting for Computer Machinists (ACM) has sufferred from the Y2K bug and lost some vital data for preparing annual report for MS Inc. 
+All what they remember is that MS Inc. posted a surplus or a deficit each month of 1999 and each month when MS Inc. posted surplus, the amount of surplus was s and each month when MS Inc. posted deficit, the deficit was d. They do not remember which or how many months posted surplus or deficit. MS Inc., unlike other companies, posts their earnings for each consecutive 5 months during a year. ACM knows that each of these 8 postings reported a deficit but they do not know how much. The chief accountant is almost sure that MS Inc. was about to post surplus for the entire year of 1999. Almost but not quite. 
+Write a program, which decides whether MS Inc. suffered a deficit during 1999, or if a surplus for 1999 was possible, what is the maximum amount of surplus that they can post.
+
+有一个公司由于某个病毒使公司赢亏数据丢失，但该公司每月的 赢亏是一个定数，要么一个月赢利s，要么一月亏d。现在ACM只知道该公司每五个月有一个赢亏报表，而且每次报表赢利情况都为亏。在一年中这样的报表总共有8次（1到5，2到6，…，8到12），现在要编一个程序确定当赢s和亏d给出，并满足每张报表为亏的情况下，全年公司最高可赢利多少，若存在，则输出多多额，若不存在，输出"Deficit"。
+
+
+如果 4 盈利 1 亏 <0, 只要 5、8月亏
+
+如果3盈利2亏 < 0 4、5、8、9亏
+
+如果2盈利3亏 < 0  3、4、5、8、9、10
+
+1盈利4亏 2、3、4、5、6、8、9、10、11
+
+0盈利5亏不存在
